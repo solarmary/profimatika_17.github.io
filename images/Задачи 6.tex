@@ -1,0 +1,1130 @@
+%Важное:
+%{\tolerance=9999\unskip{\parfillskip0pt\par}}\noindent - растягивание предыдущих строк
+
+\documentclass[a4paper,10pt]{article} % добавить leqno в [] для нумерации слева
+\usepackage{setspace}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\justifying
+\sloppy
+\tolerance=500
+\hyphenpenalty=10000
+\emergencystretch=3em
+ \usepackage{color}
+\definecolor{darkgreen}{rgb}{0,.5,0}
+\usepackage[colorlinks,filecolor=blue,citecolor=darkgreen, urlcolor=blue]{hyperref}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} %AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage[left=20mm, top=10mm, right=20mm, bottom=30mm, nohead, nofoot]{geometry}
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+\renewcommand{\baselinestretch}{0.9}
+%%% Работа с картинками
+\usepackage{graphicx}  % Для вставки рисунков
+\graphicspath{{images/}{zad6/}}  % папки с картинками
+\setlength\fboxsep{3pt} % Отступ рамки \fbox{} от рисунка
+\setlength\fboxrule{1pt} % Толщина линий рамки \fbox{}
+\usepackage{wrapfig} % Обтекание рисунков и таблиц текстом
+\usepackage{colortbl}
+\definecolor{darkishgreen}{RGB}{39,203,22}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+\definecolor{Gray}{gray}{0.9}
+\definecolor{lightRed}{RGB}{230,170,150}
+\definecolor{modRed}{RGB}{230,82,90}
+\definecolor{strongRed}{RGB}{230,6,6}
+\definecolor {myblue}{RGB}{0, 51, 151}
+\definecolor {myvio}{RGB}{0, 100, 0}
+%%% Работа с таблицами
+\usepackage{array,tabularx,tabulary,booktabs} % Дополнительная работа с таблицами
+\usepackage{longtable}  % Длинные таблицы
+\usepackage{multirow} % Слияние строк в таблице
+\usepackage{floatflt}
+\usepackage{multicol}
+
+
+\usepackage{fancyhdr} % Колонтитулы
+ 	\pagestyle{fancy}
+ 	\renewcommand{\headrulewidth}{0.3mm}  % Толщина линейки, отчеркивающей верхний колонтитул
+ 	\rhead{\includegraphics [scale=0.05]{lab.jpeg}}
+ 	\chead{}
+ 	\lhead{Факты. Задача 6}
+ 	 	\lfoot{inst: @math\_with\_us}
+ 	\rfoot{youtube: Math whis us}
+ 	% \cfoot{Нижний в центре} % По умолчанию здесь номер страницы
+\headsep=10mm
+\footskip=8mm
+ \headheight=3mm
+\begin{document}
+\begin{spacing}{1.0}
+{\large
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{25c94a183e736eaf2ec9ab3a1936859a.eps}}\end{wrapfigure}
+\subsection*{Задача 1}
+Одна сторона треугольника равна $\sqrt{2}$, радиус описанной окружности равен $1$. Найдите острый угол треугольника, противолежащий этой стороне. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{2c05ba52608ef1886c040f2179bdb670.eps}}\end{wrapfigure}
+\subsection*{Задача 2}
+\noindent
+В треугольнике $ABC$ угол $C$ равен $90^\circ$, $AB=5$, $\sin A=\dfrac{7}{25}$. Найдите $AC$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{a29e7980189e7d75cdb2043c08d38e0e.eps}}\end{wrapfigure}
+\subsection*{Задача 3}
+\noindent
+В треугольнике $ABC$ угол $C$ равен $90^\circ$, $AB=8$, $\cos A=0,5$. Найдите $AC$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{75d3cec6749bff063d658843d379a1be.eps}}\end{wrapfigure}
+\subsection*{Задача 4}
+\noindentВ треугольнике $ABC$ угол $C$ равен $90^\circ$, $CH$~--- высота, $AB=27$, $\sin A=\dfrac{2}{3}$. Найдите $BH$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{f785e3a03586ffd78d2d45066547c6e4.eps}}\end{wrapfigure}
+\subsection*{Задача 5}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC=8}$, $\cos A=0,5$. Найдите $AB$.
+
+\vspace{1.5cm}
+
+\subsection*{Задача 6}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC}$, $AH$~--- высота, ${\tg BAC=\dfrac{7}{24}}$. Найдите $\cos BAH$.
+
+\subsection*{Задача 7}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC}$, $AH$~--- высота, $AB=8$, ${\cos BAC=0,5}$. Найдите $BH$.
+
+\subsection*{Задача 8}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC}$, $AB=25$, высота $AH$ равна~$20$. Найдите $\cos BAC$.
+
+\subsection*{Задача 9}
+\noindentВ тупоугольном треугольнике $ABC$ известно, что ${AC=BC}$, высота $AH$ равна $7$, $CH=24$. Найдите $\sin ACB$.
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{75d3cec6749bff063d658843d379a1be.eps}}\end{wrapfigure}
+\subsection*{Задача 10}
+\noindentВ треугольнике $ABC$ угол $C$ равен $90^\circ$, $CH$~--- высота, $BH=12$, $\sin A=\dfrac{2}{3}$. Найдите $AB$.
+
+\vspace{1cm}
+
+\subsection*{Задача 11}
+\noindentОснования равнобедренной трапеции равны 51 и 65. Боковые стороны равны~25. Найдите синус острого угла трапеции.
+
+\subsection*{Задача 12}
+\noindentБольшее основание равнобедренной трапеции равно 34. Боковая сторона равна~14. Синус острого угла равен $\dfrac{2\sqrt{10}}{7}$. Найдите меньшее основание.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{4b37cd74db914facb3ff1dbaa0d2ab5a.eps}}\end{wrapfigure}
+\subsection*{Задача 13}
+\noindentНайдите диагональ квадрата, если его площадь равна 2.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{e461fa935e5bb360bb539edbf834c003.eps}}\end{wrapfigure}
+\subsection*{Задача 14}
+\noindentУгол при вершине, противолежащей основанию равнобедренного треугольника, равен $150^\circ$. Боковая сторона треугольника равна 20. Найдите площадь этого треугольника. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.9]{2db1e225e2de87d6d37b9bb9a23e7281.eps}}\end{wrapfigure}
+\subsection*{Задача 15}
+\noindentНайдите площадь треугольника, две стороны которого равны 8 и 12, а угол между ними равен $30^\circ$. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{ccfcf8ed6a52c16cb9938f67d134cc4c.eps}}\end{wrapfigure}
+\subsection*{Задача 16}
+\noindentПлощадь треугольника $ABC$ равна 4. $DE$~--- средняя линия. Найдите площадь треугольника $CDE$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{8bc2a77885e7796847d6a2232cf52183.eps}}\end{wrapfigure}
+\subsection*{Задача 17}
+\noindentНайдите площадь прямоугольника, если его периметр равен 18, и одна сторона на 3 больше другой.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{4c69d49077471f1127b878ae23852700.eps}}\end{wrapfigure}
+\subsection*{Задача 18}
+\noindentПериметр прямоугольника равен 34, а площадь равна 60. Найдите диагональ этого прямоугольника. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{817464e7aea088afab059053b872e66e.eps}}\end{wrapfigure}
+\subsection*{Задача 19}
+\noindentСторона прямоугольника относится к его диагонали, как 4:5, а другая сторона равна 6. Найдите площадь прямоугольника. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{35e0640f09425d784f56a7635c733bf1.eps}}\end{wrapfigure}
+\subsection*{Задача 20}
+\noindentВо сколько раз площадь квадрата, описанного около окружности, больше площади квадрата, вписанного в эту окружность?
+
+\vspace{1.5cm}
+
+\subsection*{Задача 21}
+\noindentПараллелограмм и прямоугольник имеют одинаковые стороны. Найдите острый угол параллелограмма, если его площадь равна половине площади прямоугольника. Ответ дайте в градусах.
+
+\includegraphics[scale=0.8]{988a0fd7b40050c847d8de37c522efcf.eps}
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{dec02cefd2da9c1e8f64cc86ba0237f9.eps}}\end{wrapfigure}
+\subsection*{Задача 22}
+\noindentСтороны параллелограмма равны 9 и 15. Высота, опущенная на первую из этих сторон, равна 10. Найдите высоту, опущенную на вторую сторону параллелограмма. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{bb2066143a3a59a61e1876a8181bfbcf.eps}}\end{wrapfigure}
+\subsection*{Задача 23}
+\noindentПлощадь параллелограмма равна 40, две его стороны равны 5 и 10. Найдите большую высоту этого параллелограмма.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{35d63289919db6fb95edcf430a17bcf1.eps}}\end{wrapfigure}
+\subsection*{Задача 24}
+\noindentНайдите площадь ромба, если его высота равна 2, а острый угол $30^\circ$. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{5e34004137a8f2063529cc477b047694.eps}}\end{wrapfigure}
+\subsection*{Задача 25}
+\noindentНайдите площадь прямоугольного треугольника, если его катет и гипотенуза равны соответственно 6 и 10.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{aa0d711d043dc77c8c649941d0b2d06c.eps}}\end{wrapfigure}
+\subsection*{Задача 26}
+\noindentБоковая сторона равнобедренного треугольника равна 5, а основание равно 6. Найдите площадь этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.9]{899e3ca0f225fda3b77ef33a35849994.eps}}\end{wrapfigure}
+\subsection*{Задача 27}
+\noindentУгол при вершине, противолежащей основанию равнобедренного треугольника, равен $30^\circ$. Найдите боковую сторону треугольника, если его площадь равна 25.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{1c6f7e98b00e43bdc8fb61705ebf05e8.eps}}\end{wrapfigure}
+\subsection*{Задача 28}
+\noindentВ треугольнике со сторонами 9 и 6 проведены высоты к этим сторонам. Высота, проведённая к первой из этих сторон, равна 4. Чему равна высота, проведённая ко второй стороне? 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{75705f163eb01245de6ca55dbd6d7a59.eps}}\end{wrapfigure}
+\subsection*{Задача 29}
+\noindentПлощадь треугольника равна 24, а радиус вписанной окружности равен 2. Найдите периметр этого треугольника. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{a8387cc13b588f0112902296c336958b.eps}}\end{wrapfigure}
+\subsection*{Задача 30}
+\noindentОснование трапеции равно 13, высота равна 5, а площадь равна 50. Найдите второе основание трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{91035b913a5b7907e16a9f970929553a.eps}}\end{wrapfigure}
+\subsection*{Задача 31}
+\noindentВысота трапеции равна 10, площадь равна 150. Найдите среднюю линию трапеции. 
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{22f476607d7ef5e1502b8793fa347ba3.eps}}\end{wrapfigure}
+\subsection*{Задача 32}
+\noindentОснования равнобедренной трапеции равны 14 и 26, а её периметр равен 60. Найдите площадь трапеции. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}
+{r}{0cm}{\includegraphics[scale=0.6]{f382005e655523b258ed7e4566d60363.eps}}\end{wrapfigure}
+\subsection*{Задача 33}
+\noindentНайдите площадь прямоугольной трапеции, основания которой равны 6 и 2, большая боковая сторона составляет с основанием угол $45^\circ$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{60238e5458f29d934d971cfb7c7cfe31.eps}}\end{wrapfigure}
+\subsection*{Задача 34}
+\noindentОснования трапеции равны 27 и 9, боковая сторона равна 8. Площадь трапеции равна 72. Найдите острый угол трапеции, прилежащий к данной боковой стороне. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{0281ba82f0f78f75aae071b0c70ea591.eps}}\end{wrapfigure}
+\subsection*{Задача 35}
+\noindentОколо окружности, радиус которой равен 3, описан многоугольник, площадь которого равна 33. Найдите его периметр. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{332c6af5d004a2bd1b707a8ba9bada81.eps}}\end{wrapfigure}
+\subsection*{Задача 36}
+\noindentОдин острый угол прямоугольного треугольника на $32^\circ$ больше другого. Найдите больший острый угол. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{f95f5e6d9766290acafb29ad0d8fdaba.eps}}\end{wrapfigure}
+\subsection*{Задача 37}
+\noindentВ треугольнике $ABC$ угол $A$ равен $40^\circ$, внешний угол при вершине $B$ равен $102^\circ$. Найдите угол $C$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{acfde5bf0d094970210b36b0a9b21e73.eps}}\end{wrapfigure}
+\subsection*{Задача 38}
+\noindentВ треугольнике $ABC$ угол $C$ равен $118^\circ$, стороны $AC$ и $BC$ равны. Найдите угол $A$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.9]{67092f63b2db839114294bc0ca78d134.eps}}\end{wrapfigure}
+\subsection*{Задача 39}
+\noindentВ треугольнике $ABC$ стороны $AC$ и $BC$ равны. Внешний угол при вершине $B$ равен $122^\circ$. Найдите угол $C$. Ответ дайте в градусах.
+
+\vspace{1cm}
+
+\subsection*{Задача 40}
+\noindentУглы треугольника относятся как $2:3:4$. Найдите меньший из них. Ответ дайте в градусах.
+
+
+\subsection*{Задача 41}
+\noindentОдин острый угол прямоугольного треугольника в 4 раза больше другого. Найдите больший острый угол. Ответ дайте в градусах.
+
+
+\subsection*{Задача 42}
+\noindentОдин угол равнобедренного треугольника на $90^\circ$ больше другого. Найдите меньший угол. Ответ дайте в градусах.
+
+\vspace{1cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{959b43e45a7c1743be464e228c79f86c.eps}}\end{wrapfigure}
+\subsection*{Задача 43}
+В треугольнике $ABC$ угол $A$ равен $30^\circ$, угол~$B$~--- тупой, $CH$~--- высота, угол $BCH$ равен $22^\circ$. Найдите угол $ACB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{57a381b9f251b76a2b5456a1d077bf70.eps}}\end{wrapfigure}
+\subsection*{Задача 44}
+\noindentВ треугольнике $ABC$ угол $C$ равен $50^\circ$, $AD$~--- биссектриса, угол $CAD$ равен $28^\circ$. Найдите угол $B$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{26638a137713c9cdc6d21aa3bb5b925d.eps}}\end{wrapfigure}
+\subsection*{Задача 45}
+\noindentВ треугольнике $ABC$ угол $C$ равен $90^\circ$, угол $B$ равен $58^\circ$, $CD$~--- медиана. Найдите угол $ACD$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{bc2f416f180b7a6c3ced408b6e8c3fd9.eps}}\end{wrapfigure}
+\subsection*{Задача 46}
+\noindentВ остроугольном треугольнике $ABC$ угол $A$ равен $65^\circ$. $BD$ и $CE$~--- высоты, пересекающиеся в точке $O$. Найдите угол $DOE$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{7933d24da0d8bfb8892a688427bc1eef.eps}}\end{wrapfigure}
+\subsection*{Задача 47}
+\noindentДва угла треугольника равны $58^\circ$ и $72^\circ$. Найдите тупой угол, который образуют высоты треугольника, выходящие из вершин этих углов. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.75]{01665d11fa1c065c6efd08557b4be3a8.eps}}\end{wrapfigure}
+\subsection*{Задача 48}
+\noindentВ треугольнике $ABC$ угол $C$ равен $58^\circ$, $AD$ и $BE$ ~--- биссектрисы, пересекающиеся в точке $O$. Найдите угол $AOB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{0da035e408397de68bee17bc646c355b.eps}}\end{wrapfigure}
+\subsection*{Задача 49}
+\noindentОстрый угол прямоугольного треугольника равен $32^\circ$. Найдите острый угол, образованный биссектрисами этого и прямого углов треугольника. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{377f98f4b69b56f8688a990e70bf6bd9.eps}}\end{wrapfigure}
+\subsection*{Задача 50}
+\noindentНайдите острый угол между биссектрисами острых углов прямоугольного треугольника. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{b45f29d40e619cd6fb9547e3eb42188b.eps}}\end{wrapfigure}
+\subsection*{Задача 51}
+В треугольнике $ABC$ $CH$~--- высота, $AD$~--- биссектриса, $O$~--- точка пересечения прямых $CH$ и $AD$, угол $BAD$ равен $26^\circ$. Найдите угол $AOC$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{f7baf8390c18903b2bf0e0a6a097641e.eps}}\end{wrapfigure}
+\subsection*{Задача 52}
+\noindentВ треугольнике $ABC$ проведена биссектриса $AD$ и $AB=AD=CD$. Найдите меньший угол треугольника $ABC$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{0ec10badeec453c145757e44374d10e7.eps}}\end{wrapfigure}
+\subsection*{Задача 53}
+\noindentВ треугольнике $ABC$ угол $A$ равен $44^\circ$, угол~$C$ равен $62^\circ$. На продолжении стороны $AB$ за точку $B$ отложен отрезок $BD$, равный стороне $BC$. Найдите угол $D$ треугольника $BCD$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{c0f4c07c1ea8900defc3eb21b494ea58.eps}}\end{wrapfigure}
+\subsection*{Задача 54}
+\noindentОстрый угол $B$ прямоугольного треугольника $ABC$ равен $61^\circ$. Найдите угол между высотой $CH$ и биссектрисой $CD$, проведёнными из вершины прямого угла. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{d448ca6e3d35e45b3d231f1fa666a3e8.eps}}\end{wrapfigure}
+\subsection*{Задача 55}
+\noindentОстрый угол $B$ прямоугольного треугольника равен $66^\circ$. Найдите угол между высотой $CH$ и медианой $CM$, проведёнными из вершины прямого угла. Ответ дайте в~градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{997eca4703096d0c1917b5f280333ef1.eps}}\end{wrapfigure}
+\subsection*{Задача 56}
+\noindentОстрый угол $B$ прямоугольного треугольника равен $66^\circ$. Найдите угол между биссектрисой $CD$ и медианой $CM$, проведёнными из вершины прямого угла. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{f41b6aac591e188688a46c31bd82739f.eps}}\end{wrapfigure}
+\subsection*{Задача 57}
+\noindentВ треугольнике $ABC$ угол $B$ равен $45^\circ$, угол $C$ равен $85^\circ$, $AD$~--- биссектриса, $E$~--- такая точка на $AB$, что $AE = AC$. Найдите угол $BDE$. Ответ дайте в градусах.
+
+\vspace{2cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{88658aa4045b3aeb99185cbecd5ba92d.eps}}\end{wrapfigure}
+\subsection*{Задача 58}
+\noindentВ треугольнике $ABC$ угол $A$ равен $60^\circ$, угол $B$ равен $82^\circ$. $AD$, $BE$ и $CF$~--- биссектрисы, пересекающиеся в точке $O$. Найдите угол $AOF$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{19973b70494cac190918fd47ff0f27e9.eps}}\end{wrapfigure}
+\subsection*{Задача 59}
+\noindentВ треугольнике $ABC$ известно, что \linebreak${AB=BC=AC=2\sqrt{3}}$. Найдите {высоту~$CH$}. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.65]{cd88d27c745b2c33b18e9bdaf7fb25aa.eps}}\end{wrapfigure}
+\subsection*{Задача 60}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC=4}$, угол $C$ равен $30^\circ$. Найдите высоту $AH$. 
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{9cb7de6af3bdc9d345f1287fdee6a144.eps}}\end{wrapfigure}
+\subsection*{Задача 61}
+\noindentВ треугольнике $ABC$ известно, что ${AC=BC=2\sqrt{3}}$, угол $C$ равен $120^\circ$. Найдите высоту $AH$. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{b20a4ded926443581223067da9800c5a.eps}}\end{wrapfigure}
+\subsection*{Задача 62}
+\noindentСумма двух углов параллелограмма равна $100^\circ$. Найдите один из оставшихся углов. Ответ дайте в~градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=1.2]{3056e577437e014b85591f927a3411a3.eps}}\end{wrapfigure}
+\subsection*{Задача 63}
+\noindentДиагональ параллелограмма образует с двумя его сторонами углы $26^\circ$ и $34^\circ$. Найдите больший угол параллелограмма. Ответ дайте в градусах. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{b20a4ded926443581223067da9800c5a.eps}}\end{wrapfigure}
+\subsection*{Задача 64}
+\noindentПериметр параллелограмма равен 46. Одна сторона параллелограмма на 3 больше другой. Найдите меньшую сторону параллелограмма.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{69e4029322f1d0d9e9983d9f2534c20a.eps}}\end{wrapfigure}
+\subsection*{Задача 65}
+\noindentНайдите высоту ромба, сторона которого равна~$\sqrt{3}$, а острый угол равен~$60^\circ$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0f14ca8240c5b0af03bffd437a4566ae.eps}}\end{wrapfigure}
+\subsection*{Задача 66}
+\noindentЧему равен больший угол равнобедренной трапеции, если известно, что разность противолежащих углов равна $50^\circ$? Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{6334ba0950b39f7035fc6bf8de9eae06.eps}}\end{wrapfigure}
+\subsection*{Задача 67}
+\noindentСредняя линия трапеции равна 28, а меньшее основание равно 18. Найдите большее основание трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{18025d0810699e21b340ff7a343925f1.eps}}\end{wrapfigure}
+
+\subsection*{Задача 68}
+\noindentОснования трапеции равны 4 и 10. Найдите больший из отрезков, на которые делит среднюю линию этой трапеции одна из её диагоналей.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{b20a4ded926443581223067da9800c5a.eps}}\end{wrapfigure}
+\subsection*{Задача 69}
+\noindentНайдите больший угол параллелограмма, если два его угла относятся как $3 : 7$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{b20a4ded926443581223067da9800c5a.eps}}\end{wrapfigure}
+\subsection*{Задача 70}
+\noindentНайдите угол между биссектрисами углов параллелограмма, прилежащих к одной стороне. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{b20a4ded926443581223067da9800c5a.eps}}\end{wrapfigure}
+\subsection*{Задача 71}
+\noindentДве стороны параллелограмма относятся как 3 : 4, а периметр его равен 70. Найдите б\'oльшую сторону параллелограмма.
+
+\vspace{1.5cm}
+
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{f9d5a373724d7c5d9b764eef8fd8cd34.eps}}\end{wrapfigure}
+\subsection*{Задача 72}
+\noindentБоковая сторона равнобедренного треугольника равна 10. Из точки, взятой на основании этого треугольника, проведены две прямые, параллельные боковым сторонам. Найдите периметр получившегося параллелограмма.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{f514f0f77770c2aae353686ebe2b16c4.eps}}\end{wrapfigure}
+\subsection*{Задача 73}
+\noindentБиссектриса тупого угла параллелограмма делит противоположную сторону в отношении 4 : 3, считая от вершины острого угла. Найдите б\'oльшую сторону параллелограмма, если его периметр равен 88.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{46f651e90e09aaec8326f1bdd827dfb8.eps}}\end{wrapfigure}
+\subsection*{Задача 74}
+\noindentТочка пересечения биссектрис двух углов параллелограмма, прилежащих к одной стороне, принадлежит противоположной стороне. Меньшая сторона параллелограмма равна 5. Найдите его б\'oльшую сторону.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{1d4f3f6cbd475af2eded1bca021750c7.eps}}\end{wrapfigure}
+\subsection*{Задача 75}
+\noindentНайдите б\'oльшую диагональ ромба, сторона которого равна~$\sqrt{3}$, а острый угол равен $60^\circ$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{f52db9f63ec51167b2a473a67064180a.eps}}\end{wrapfigure}
+\subsection*{Задача 76}
+\noindentДиагонали ромба относятся как 3 : 4. Периметр ромба равен~200. Найдите высоту ромба.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0f14ca8240c5b0af03bffd437a4566ae.eps}}\end{wrapfigure}
+\subsection*{Задача 77}
+\noindentВ равнобедренной трапеции большее основание равно~25, боковая сторона равна 10, угол между ними $60^\circ$. Найдите меньшее основание.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0f14ca8240c5b0af03bffd437a4566ae.eps}}\end{wrapfigure}
+\subsection*{Задача 78}
+\noindentВ равнобедренной трапеции основания равны 12 и 27, острый угол равен $60^\circ$. Найдите её периметр.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{24a137af090261b0dc87e39137664a2e.eps}}\end{wrapfigure}
+\subsection*{Задача 79}
+\noindentВ трапеции $ABCD$ меньшее основание $BC$ равно 4, прямая $BE$ параллельна боковой стороне $CD$. Найдите периметр трапеции $ABCD$, если периметр треугольника $ABE$ равен 15.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{3a91d6cf373789911c972e64cdd3f5eb.eps}}\end{wrapfigure}
+\subsection*{Задача 80}
+\noindentВысота, опущенная из вершины тупого угла на большее основание равнобедренной трапеции, делит его на отрезки равные 10 и 4. Найдите среднюю линию этой трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{2318b65dde5eaeece7e1915e068b5589.eps}}\end{wrapfigure}
+\subsection*{Задача 81}
+\noindentОснования равнобедренной трапеции равны 15 и 9, один из углов равен $45^\circ$. Найдите высоту трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{dfe038a9e495e62ccd74953c05f7bc71.eps}}\end{wrapfigure}
+\subsection*{Задача 82}
+\noindentОснования трапеции равны 3 и 2. Найдите отрезок, соединяющий середины диагоналей трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{dc252f02f741393277f971aeb297e2ef.eps}}\end{wrapfigure}
+\subsection*{Задача 83}
+\noindentВ равнобедренной трапеции диагонали перпендикулярны. Высота трапеции равна 12. Найдите её среднюю линию.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{e3f0785b4c338ff85ff7ce010575b2a3.eps}}\end{wrapfigure}
+\subsection*{Задача 84}
+\noindentДиагонали четырёхугольника равны 4 и 5. Найдите периметр четырёхугольника, вершинами которого являются середины сторон данного четырёхугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{69ab0db4c1be758d4cfa7263fbbc4a2b.eps}}\end{wrapfigure}
+\subsection*{Задача 85}
+\noindentРадиус окружности равен 1. Найдите величину острого вписанного угла, опирающегося на хорду, равную радиусу окружности? Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{69ab0db4c1be758d4cfa7263fbbc4a2b.eps}}\end{wrapfigure}
+\subsection*{Задача 86}
+\noindentНайдите хорду, на которую опирается угол $30^\circ$, вписанный в окружность радиуса 3.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{7467cc2fc93570729697001676428807.eps}}\end{wrapfigure}
+\subsection*{Задача 87}
+\noindentРадиус окружности равен 1. Найдите величину тупого вписанного угла, опирающегося на хорду, равную радиусу окружности? Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c065fce4558487e1e7930c2e6efa5f09.eps}}\end{wrapfigure}
+\subsection*{Задача 88}
+\noindentНайдите хорду, на которую опирается угол~$120^\circ$, вписанный в окружность радиуса $\sqrt{3}$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{b0e99144c554f0c673226119b507bf30.eps}}\end{wrapfigure}
+\subsection*{Задача 89}
+\noindentНайдите вписанный угол, опирающийся на дугу, которая составляет $\dfrac{1}{5}$ окружности. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{b0e99144c554f0c673226119b507bf30.eps}}\end{wrapfigure}
+\subsection*{Задача 90}
+\noindentДуга окружности $AC$, не содержащая точки $B$, имеет градусную меру $200^\circ$, а дуга окружности $BC$, не содержащая точки $A$, имеет градусную меру $80^\circ$. Найдите вписанный угол $ACB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c065fce4558487e1e7930c2e6efa5f09.eps}}\end{wrapfigure}
+\subsection*{Задача 91}
+\noindentХорда $AB$ делит окружность на две части, градусные меры которых относятся как 5 : 7. Под каким углом видна эта хорда из точки $C$, принадлежащей меньшей дуге окружности? Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{8a3922a47ae0c9176b5eaf06c2fabf6c.eps}}\end{wrapfigure}
+\subsection*{Задача 92}
+\noindentТочки $A$, $B$, $C$, расположенные на окружности, делят её на три дуги, градусные величины которых относятся как 1 : 3 : 5. Найдите больший угол треугольника $ABC$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=1.2]{b480e6327c99e656abdfdb0621f5a717.eps}}\end{wrapfigure}
+\subsection*{Задача 93}
+\noindentОтрезки $AC$ и $BD$~--- диаметры окружности с центром~$O$. Угол $ACB$ равен $38^\circ$. Найдите угол $AOD$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=1.2]{b480e6327c99e656abdfdb0621f5a717.eps}}\end{wrapfigure}
+\subsection*{Задача 94}
+\noindentОтрезки $AC$ и $BD$~--- диаметры окружности с центром~$O$. Угол $AOD$ равен $110^\circ$. Найдите вписанный угол $ACB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0cdb82342b8e26c21425a4eb3ebc5704.eps}}\end{wrapfigure}
+\subsection*{Задача 95}
+\noindentЧетырёхугольник $ABCD$ вписан в окружность. Угол $BAD$ равен $58^\circ$. Найдите угол~$BCD$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0cdb82342b8e26c21425a4eb3ebc5704.eps}}\end{wrapfigure}
+\subsection*{Задача 96}
+\noindentСтороны $AB$, $BC$, $CD$ и $AD$ четырёхугольника $ABCD$ стягивают дуги описанной окружности, градусные величины которых равны соответственно $95^\circ$, $49^\circ$, $71^\circ$, $145^\circ$. Найдите угол $ABC$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0cdb82342b8e26c21425a4eb3ebc5704.eps}}\end{wrapfigure}
+\subsection*{Задача 97}
+\noindentТочки $A$, $B$, $C$, $D$, расположенные на окружности, делят эту окружность на четыре дуги $AB$, $BC$, $CD$ и $AD$, градусные величины которых относятся соответственно как ${4 : 2 : 3 : 6}$. Найдите угол $BAD$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{806f646e868577718608d852e6b22d56.eps}}\end{wrapfigure}
+\subsection*{Задача 98}
+\noindentЧетырёхугольник $ABCD$ вписан в окружность. Угол $ABD$ равен~$75^\circ$, угол $CAD$ равен~$35^\circ$. Найдите угол $ABC$. Ответ дайте в~градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{806f646e868577718608d852e6b22d56.eps}}\end{wrapfigure}
+\subsection*{Задача 99}
+\noindentЧетырёхугольник $ABCD$ вписан в окружность. Угол $ABC$ равен~$110^\circ$, угол $ABD$ равен~$70^\circ$. Найдите угол $CAD$. Ответ дайте в~градусах.
+
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{df31eb2ea0df7245cc2ef572daf145ae.eps}}\end{wrapfigure}
+\subsection*{Задача 100}
+\noindentХорда $AB$ стягивает дугу окружности в $92^\circ$. Найдите угол $ABC$ между этой хордой и касательной к окружности, проведённой через точку $B$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{fe46005cbd8c2ad26ef505f2e33d0d3e.eps}}\end{wrapfigure}
+\subsection*{Задача 101}
+\noindentЧерез концы $A$ и $B$ дуги окружности с центром $O$ проведены касательные $AC$ и $BC$. Угол $CAB$ равен $32^\circ$. Найдите угол $AOB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{fe46005cbd8c2ad26ef505f2e33d0d3e.eps}}\end{wrapfigure}
+\subsection*{Задача 102}
+\noindentЧерез концы $A$ и $B$ дуги окружности с центром $O$ проведены касательные $AC$ и $BC$. Меньшая дуга $AB$ равна $62^\circ$. Найдите угол $ACB$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{fe46005cbd8c2ad26ef505f2e33d0d3e.eps}}\end{wrapfigure}
+\subsection*{Задача 103}
+\noindentКасательные $CA$ и $CB$ к окружности образуют угол $ACB$, равный $122^\circ$. Найдите величину меньшей дуги $AB$, стягиваемой точками касания. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{cf82cc038fe4485adcce57bc74fb3862.eps}}\end{wrapfigure}
+\subsection*{Задача 104}
+\noindentНайдите угол $ACO$, если его сторона $CA$ касается окружности, $O$~--- центр окружности, сторона $CO$ пересекает окружность в точке $B$ (см. рис.), а дуга $AB$ окружности, заключённая внутри этого угла равна $64^\circ$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{cf82cc038fe4485adcce57bc74fb3862.eps}}\end{wrapfigure}
+\subsection*{Задача 105}
+\noindentУгол $ACO$ равен $28^\circ$. Его сторона $CA$ касается окружности с центром в точке $O$. Сторона $CO$ пересекает окружность в точке $B$ (см. рис.). Найдите градусную меру дуги $AB$ окружности, заключённой внутри этого угла. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{03fdc8db840ec0da2d46332b2ac427a7.eps}}\end{wrapfigure}
+\subsection*{Задача 106}
+\noindentНайдите угол $ACB$, если вписанные углы $ADB$ и $DAE$ опираются на дуги окружности, градусные меры которых равны соответственно $118^\circ$ и $38^\circ$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{03fdc8db840ec0da2d46332b2ac427a7.eps}}\end{wrapfigure}
+\subsection*{Задача 107}
+\noindentУгол $ACB$ равен $42^\circ$. Градусная мера дуги $AB$ окружности, не содержащей точек $D$ и $E$, равна $124^\circ$. Найдите угол $DAE$. Ответ дайте в градусах.
+
+\vspace{3cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{f4e6511f015e070479213ff5539e53af.eps}}\end{wrapfigure}
+\subsection*{Задача 108}
+\noindentСторона правильного треугольника равна $\sqrt{3}$. Найдите радиус окружности, описанной около этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{f4e6511f015e070479213ff5539e53af.eps}}\end{wrapfigure}
+\subsection*{Задача 109}
+\noindentРадиус окружности, описанной около правильного треугольника, равен $\sqrt{3}$. Найдите сторону этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.75]{2e1b509bdc5d054acb495218a0d454fa.eps}}\end{wrapfigure}
+\subsection*{Задача 110}
+\noindentВысота правильного треугольника равна 3. Найдите радиус окружности, описанной около этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.75]{2e1b509bdc5d054acb495218a0d454fa.eps}}\end{wrapfigure}
+\subsection*{Задача 111}
+\noindentРадиус окружности, описанной около правильного треугольника, равен 3. Найдите высоту этого треугольника.
+
+
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{72d3b3fffde74ef70229df33563a9fad.eps}}\end{wrapfigure}
+\subsection*{Задача 112}
+\noindentГипотенуза прямоугольного треугольника равна 12. Найдите радиус окружности, описанной около этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{72d3b3fffde74ef70229df33563a9fad.eps}}\end{wrapfigure}
+\subsection*{Задача 113}
+\noindentРадиус окружности, описанной около прямоугольного треугольника, равен 4. Найдите гипотенузу этого треугольника.
+
+\vspace{3cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{72d3b3fffde74ef70229df33563a9fad.eps}}\end{wrapfigure}
+\subsection*{Задача 114}
+\noindentВ треугольнике $ABC$ угол $C$ равен $90^\circ$, ${AC=4}$, ${BC=3}$. Найдите радиус окружности, описанной около этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{cccb729a0fb9a03487050f5f11c084f5.eps}}\end{wrapfigure}
+\subsection*{Задача 115}
+\noindentБоковая сторона равнобедренного треугольника равна 1, угол при вершине, противолежащей основанию, равен $120^\circ$. Найдите диаметр описанной окружности этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{248edb9fd7a34d56eb5813d9dfba2c7a.eps}}\end{wrapfigure}
+\subsection*{Задача 116}
+\noindentЧему равна сторона правильного шестиугольника, вписанного в окружность, радиус которой равен 6?
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c72f0632b7472292e4d32dfcc7efafd1.eps}}\end{wrapfigure}
+\subsection*{Задача 117}
+\noindentНайдите радиус окружности, вписанной в правильный треугольник, высота которого равна 6.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c72f0632b7472292e4d32dfcc7efafd1.eps}}\end{wrapfigure}
+\subsection*{Задача 118}
+\noindentРадиус окружности, вписанной в правильный треугольник, равен 6. Найдите высоту этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c72f0632b7472292e4d32dfcc7efafd1.eps}}\end{wrapfigure}
+\subsection*{Задача 119}
+\noindentСторона правильного треугольника равна $\sqrt{3}$. Найдите радиус окружности, вписанной в этот треугольник.
+
+\vspace{2cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{c72f0632b7472292e4d32dfcc7efafd1.eps}}\end{wrapfigure}
+\subsection*{Задача 120}
+\noindentРадиус окружности, вписанной в правильный треугольник, равен $\dfrac{\sqrt{3}}{6}$. Найдите сторону этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.4]{1686cf3b3b1616455b6f2570f94f2f98.eps}}\end{wrapfigure}
+\subsection*{Задача 121}
+\noindentСторона ромба равна 1, острый угол равен $30^\circ$. Найдите радиус вписанной окружности этого ромба.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.4]{1686cf3b3b1616455b6f2570f94f2f98.eps}}\end{wrapfigure}
+\subsection*{Задача 122}
+\noindentОстрый угол ромба равен $30^\circ$. Радиус окружности, вписанной в этот ромб, равен 2.
+Найдите сторону ромба.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{a05400f0736cc523bcaeee4e577eea66.eps}}\end{wrapfigure}
+\subsection*{Задача 123}
+\noindentНайдите сторону правильного шестиугольника, описанного около окружности, радиус которой равен $\sqrt{3}$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{a05400f0736cc523bcaeee4e577eea66.eps}}\end{wrapfigure}
+\subsection*{Задача 124}
+\noindentНайдите радиус окружности, вписанной в правильный шестиугольник со стороной $\sqrt{3}$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{9cad14408e42005d1ac170939c537c87.eps}}\end{wrapfigure}
+\subsection*{Задача 125}
+\noindentВ треугольнике $ABC$ сторона $AB$ равна 1, угол $C$ равен $30^\circ$. Найдите радиус описанной около этого треугольника окружности.
+
+\vspace{2cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{1a31ffb443258b3110ae2e5bdc3cf3db.eps}}\end{wrapfigure}
+\subsection*{Задача 126}
+\noindentОдна сторона треугольника равна радиусу описанной окружности. Найдите острый угол треугольника, противолежащий этой стороне. Ответ дайте в градусах.
+
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{9cad14408e42005d1ac170939c537c87.eps}}\end{wrapfigure}
+\subsection*{Задача 127}
+\noindentУгол $C$ треугольника $ABC$, вписанного в окружность радиуса 3, равен $30^\circ$. Найдите сторону $AB$ этого треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{bd55538e8952d62ff510aafca17cdf57.eps}}\end{wrapfigure}
+\subsection*{Задача 128}
+\noindentВ треугольнике $ABC$ сторона $AB$ равна 1, угол~$C$ равен $150^\circ$. Найдите радиус описанной около этого треугольника окружности.
+
+\vspace{1.5cm}
+
+\subsection*{Задача 129}
+Сторона $AB$ треугольника $ABC$ с тупым углом $C$ равна радиусу описанной около него окружности. Найдите угол $C$. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{3c73869df5b9be5007403fe86655255d.eps}}\end{wrapfigure}
+\subsection*{Задача 130}
+\noindentБоковые стороны равнобедренного треугольника равны 40, основание равно 48. Найдите радиус описанной около этого треугольника окружности.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{4e9d6df408b61f2b5ddef1c1934f79b9.eps}}\end{wrapfigure}
+\subsection*{Задача 131}
+\noindentОколо трапеции описана окружность. Периметр трапеции равен 22, средняя линия равна 5. Найдите боковую сторону трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{56e7b1435634ee2e579ec1a0024ec7d8.eps}}\end{wrapfigure}
+\subsection*{Задача 132}
+\noindentБоковая сторона равнобедренной трапеции равна её меньшему основанию, угол при основании равен $60^\circ$, большее основание равно 12. Найдите радиус описанной окружности этой трапеции. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.7]{4899a2873b256b1f2f2c3881cfef60c3.eps}}\end{wrapfigure}
+\subsection*{Задача 133}
+\noindentОснования равнобедренной трапеции равны 8 и 6. Радиус описанной окружности равен 5.
+Центр окружности лежит внутри трапеции. Найдите высоту трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.9]{709318aaedf81c7629f44cae053ec56e.eps}}\end{wrapfigure}
+\subsection*{Задача 134}
+\noindentДва угла вписанного в окружность четырёхугольника равны $82^\circ$ и $58^\circ$. Найдите больший из оставшихся углов. Ответ дайте в градусах.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{d3a13eb9ca0d687c8a07baad7f5e1748.eps}}\end{wrapfigure}
+\subsection*{Задача 135}
+\noindentПериметр правильного шестиугольника равен 72. Найдите диаметр описанной окружности.
+
+\vspace{1.5cm}
+
+\subsection*{Задача 136}
+\noindentУгол между двумя соседними сторонами правильного многоугольника, вписанного в окружность, равен $108^\circ$. Найдите число вершин многоугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{57814a002164070d7501f67bfc258dd1.eps}}\end{wrapfigure}
+\subsection*{Задача 137}
+\noindentКатеты равнобедренного прямоугольного треугольника равны $2 + \sqrt{2}$. Найдите радиус окружности, вписанной в этот треугольник.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{e287a26cc4768c9346d29d2c7e8954ce.eps}}\end{wrapfigure}
+\subsection*{Задача 138}
+\noindentВ треугольнике $ABC$ угол $C$ равен $90^\circ$, ${AC=4}$, $BC=3$. Найдите радиус вписанной окружности.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{e138c0ae57cbbf65cf8b84732cba25e5.eps}}\end{wrapfigure}
+\subsection*{Задача 139}
+\noindentБоковые стороны равнобедренного треугольника равны 5, основание равно 6. Найдите радиус вписанной окружности.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{2783ea4ce73b3ddd6eaf6e1badcf15e5.eps}}\end{wrapfigure}
+\subsection*{Задача 140}
+\noindentОкружность, вписанная в равнобедренный треугольник, делит в точке касания одну из боковых сторон на два отрезка, длины которых равны 5 и 3, считая от вершины, противолежащей основанию. Найдите периметр треугольника. 
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{cb420311990a5f0f7c2d9ece55ed1751.eps}}\end{wrapfigure}
+\subsection*{Задача 141}
+\noindentБоковые стороны трапеции, описанной около окружности, равны 3 и 5. Найдите среднюю линию трапеции.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{cb420311990a5f0f7c2d9ece55ed1751.eps}}\end{wrapfigure}
+\subsection*{Задача 142}
+\noindentОколо окружности описана трапеция, периметр которой равен 40. Найдите длину её средней линии.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{cf9d11f70c73c3c0b0e999022eed2139.eps}}\end{wrapfigure}
+\subsection*{Задача 143}
+\noindentПериметр прямоугольной трапеции, описанной около окружности, равен 22, её большая боковая сторона равна 7. Найдите радиус окружности.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{ff0ea29e37f8385214dcd42dc28ca897.eps}}\end{wrapfigure}
+\subsection*{Задача 144}
+\noindentВ четырёхугольник $ABCD$ вписана окружность, $AB=10$, $CD=16$. Найдите периметр четырёхугольника $ABCD$.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{ff0ea29e37f8385214dcd42dc28ca897.eps}}\end{wrapfigure}
+\subsection*{Задача 145}
+\noindentВ четырёхугольник $ABCD$, периметр которого равен 26, вписана окружность, $AB=6$. Найдите $CD$ .
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.6]{f0f6c9a2f4416911f97e406989677893.eps}}\end{wrapfigure}
+\subsection*{Задача 146}
+\noindentК окружности, вписанной в треугольник $ABC$, проведены три касательные. Периметры отсечённых треугольников равны 6, 8, 10. Найдите периметр данного треугольника.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics{0f14ca8240c5b0af03bffd437a4566ae.eps}}\end{wrapfigure}
+\subsection*{Задача 147}
+\noindentОснования равнобедренной трапеции равны 6 и 12. Синус острого угла трапеции равен 0,8. Найдите боковую сторону.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{cec5b07a298ef226e4a95540a34f7bb1.eps}}\end{wrapfigure}
+\subsection*{Задача 148}
+\noindentПлощадь параллелограмма $ABCD$ равна 189. Точка $E$~--- середина стороны $AD$. Найдите площадь трапеции $BCDE$.
+
+\vspace{1.5cm}
+
+\subsection*{Задача 149}
+\noindentПлощадь параллелограмма $ABCD$ равна 153. Найдите площадь параллелограмма $A'B'C'D'$, вершинами которого являются середины сторон данного параллелограмма.
+
+\vspace{1.5cm}
+
+\begin{wrapfigure}{r}{0cm}{\includegraphics[scale=0.8]{cec5b07a298ef226e4a95540a34f7bb1.eps}}\end{wrapfigure}
+\subsection*{Задача 150}
+\noindentПлощадь параллелограмма $ABCD$ равна 176. Точка $E$ – середина стороны $AD$. Найдите площадь треугольника $ABE$.
+\newpage
+\subsection*{Задачи №6}
+\vspace{-0.6cm}
+    \hspace{-6mm}\begin{tabular}{p{20cm}}
+\begin{multicols}{5}
+\begin{enumerate}
+\item $45^{\circ}$;
+\item 4,8;
+\item 4;
+\item 12;
+\item 8;
+\item 0,28;
+\item 4;
+\item 0,6;
+\item 0,28;
+\item 27;
+\item 0,96;
+\item 22;
+\item 2;
+\item 100;
+\item 24;
+\item 1;
+\item 18;
+\item 13;
+\item 48;
+\item 2;
+\item 30;
+\item 6;
+\item 8;
+\item 8;
+\item 24;
+\item 12;
+\item 10;
+\item 6;
+\item 24;
+\item 7;
+\item 15;
+\item 160;
+\item 16;
+\item 30;
+\item 22;
+\item 61;
+\item 62;
+\item 31;
+\item 64;
+\item 40;
+\item 72;
+\item 30;
+\item 38;
+\item 74;
+\item 32;
+\item 115;
+\item 130;
+\item 119;
+\item 61;
+\item 45;
+\item 116;
+\item 36;
+\item 37;
+\item 16;
+\item 42;
+\item 21;
+\item 40;
+\item 49;
+\item 3;
+\item 2;
+\item 3;
+\item 130;
+\item 120;
+\item 10;
+\item 1,5;
+\item 115;
+\item 38;
+\item 5;
+\item 126;
+\item 90;
+\item 20;
+\item 20;
+\item 28;
+\item 10;
+\item 3;
+\item 48;
+\item 15;
+\item 69;
+\item 23;
+\item 10;
+\item 3;
+\item 0,5;
+\item 12;
+\item 9;
+\item 30;
+\item 3;
+\item 150;
+\item 3;
+\item 36;
+\item 40;
+\item 105;
+\item 100;
+\item 104;
+\item 35;
+\item 122;
+\item 108;
+\item 60;
+\item 110;
+\item 40;
+\item 46;
+\item 64;
+\item 118;
+\item 58;
+\item 26;
+\item 62;
+\item 40;
+\item 20;
+\item 1;
+\item 3;
+\item 2;
+\item 4,5;
+\item 6;
+\item 8;
+\item 2,5;
+\item 2;
+\item 6;
+\item 2;
+\item 18;
+\item 0,5;
+\item 1;
+\item 0,25;
+\item 8;
+\item 2;
+\item 1,5;
+\item 1;
+\item 30;
+\item 3;
+\item 1;
+\item 150;
+\item 25;
+\item 6;
+\item 6;
+\item 7;
+\item 122;
+\item 24;
+\item 5;
+\item 1;
+\item 1;
+\item 1,5;
+\item 22;
+\item 4;
+\item 10;
+\item 2;
+\item 52;
+\item 7;
+\item 24;
+\item 5;
+\item 141,75;
+\item 76,5;
+\item 44.
+
+\end{enumerate}
+\end{multicols}
+\\
+    \end{tabular}
+
+
+
+
+
+}
+\end{spacing}
+\end{document}
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Биссектрисса</title>
+    <link rel="stylesheet" href="styles/angles.css">
+    <!-- Подключение MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Биссектрисса</h1>
+    <section class="content-container">
+        <!-- Теорема 1 -->
+        <div class="theorem" id="f1bissektr">
+            <h2>1. Биссектрисы двух внешних углов треугольника и одного внутреннего пересекаются в центре вневписанной окружности</h2>
+            <p><em>Доказательство:</em> Пусть \(I\) — точка пересечения биссектрис внешних углов \(\angle A\) и \(\angle B\), \(IA'\), \(IB'\) — отрезки перпендикуляров к продолжениям сторон \(AC\) и \(BC\), \(IC'\) — отрезок перпендикуляра к стороне \(AB\). \(I\) лежит на биссектрисе угла \(A\), значит \(IA' = IC'\), аналогично получаем, что \(IB' = IC'\), значит \(IB' = IA'\), то есть точка \(I\) равноудалена от сторон угла \(C\), значит она лежит на биссектрисе угла \(C\). \(IA' = IB' = IC'\), поэтому \(I\) — центр вневписанной окружности.</p>
+            <div class="theorem-image">
+                <img src="биссектриса/bissektr_2.png" alt="Биссектрисы двух внешних углов треугольника и одного внутреннего пересекаются в центре вневписанной окружности" class="small-img">
+            </div>
+            <div class="theorem-image">
+                <img src="биссектриса/bissektr_2_proof.png" alt="Доказательство теоремы 1" class="small-img">
+            </div>
+        </div>
+
+        <!-- Теорема 2 -->
+        <div class="theorem" id="f2bissektr">
+            <h2>2. Биссектриса \(BL\) делит сторону \(AC\) так, что выполнено равенство:</h2>
+            <p>
+            \[
+            \frac{AB}{BC} = \frac{AL}{LC}.
+            \]
+            </p>
+            <p><em>Доказательство:</em> Пусть \(BH\) — высота треугольника \(ABC\), \(LH_1\) — высота треугольника \(ABL\), \(LH_2\) — высота треугольника \(BCL\). Так как каждая точка на биссектрисе равноудалена от сторон угла, то \(LH_1 = LH_2 = h\). Получаем:
+            \[
+            \frac{AL}{LC} = \frac{AL \cdot BH}{LC \cdot BH} = \frac{S_{ABL}}{S_{BCL}} = \frac{AB \cdot h}{BC \cdot h} = \frac{AB}{BC}.
+            \]</p>
+            <div class="theorem-image">
+                <img src="биссектриса/bissektr_3.png" alt="Биссектриса делит сторону AC" class="small-img">
+            </div>
+            <div class="theorem-image">
+                <img src="биссектриса/bissektr_3_proof.png" alt="Доказательство теоремы 2" class="small-img">
+            </div>
+        </div>
+
+    <!-- Теорема 3 -->
+    <div class="theorem" id="f3bissektr">
+        <h2>3. Биссектриса внешнего угла \(A\) пересекает продолжение стороны \(BC\) в точке \(K\) так, что выполнено равенство:</h2>
+        <div class="theorem-image">
+            <img src="биссектриса/bissektr_4.png" alt="Биссектриса внешнего угла пересекает продолжение стороны BC" class="small-img">
+        </div>
+        <p><em>Доказательство:</em> Доказательство ничем не будет отличаться от доказательства аналогичного факта для биссектрисы внутреннего угла. Пусть \(AH\) — высота треугольника \(ABC\), \(LH_1\) — высота треугольника \(ABL\), \(LH_2\) — высота треугольника \(BCL\). Так как каждая точка на биссектрисе равноудалена от сторон угла, то \(LH_1 = LH_2 = h\). Получаем:
+        \[
+        \frac{AL}{LC} = \frac{AL \cdot BH}{LC \cdot BH} = \frac{S_{ABL}}{S_{BCL}} = \frac{AB \cdot h}{BC \cdot h} = \frac{AB}{BC}.
+        \]</p>
+        <div class="theorem-image">
+            <img src="биссектриса/bissektr_4_proof.png" alt="Доказательство теоремы 3" class="small-img">
+        </div>
+    </div>
+
+    <!-- Теорема 4 -->
+    <div class="theorem" id="f4bissektr">
+        <h2>4. Формулы нахождения длины биссектрисы треугольника:</h2>
+        <p>
+        \[
+        l = \frac{2ac \cos \alpha}{a + c};
+        \]
+        \[
+        l^2 = ac - a'c'.
+        \]
+        </p>
+        <p><em>Доказательство:</em> Докажем первую формулу. Вычислим площади треугольников \(ABL\), \(CBL\), \(ABC\):
+        \[
+        S_{ABL} = \frac{1}{2} \cdot c \cdot l \cdot \sin \alpha; \quad S_{CBL} = \frac{1}{2} \cdot a \cdot l \cdot \sin \alpha; \quad S_{ABC} = \frac{1}{2} \cdot a \cdot c \cdot \sin 2\alpha.
+        \]
+        При этом имеем: \(S_{ABC} = S_{ABL} + S_{CBL}\). Значит:
+        \[
+        c \cdot l \cdot \sin \alpha + a \cdot l \cdot \sin \alpha = a \cdot c \cdot \sin 2\alpha \quad \Longrightarrow (a + c) \cdot \sin \alpha \cdot l = a \cdot c \cdot 2 \sin \alpha \cos \alpha.
+        \]
+        Таким образом:
+        \[
+        l = \frac{2ac \cos \alpha}{a + c}.
+        \]</p>
+        <div class="theorem-image">
+            <img src="биссектриса/bissektr_5.png" alt="Формулы нахождения длины биссектрисы" class="small-img">
+        </div>
+        <p>Докажем вторую формулу. Продлим биссектрису \(BL\) до пересечения с описанной вокруг \(ABC\) окружности (обозначим эту точку \(B'\)). \(\angle LBC = \angle CAB'\), так как эти углы опираются на одну и ту же дугу. По тем же причинам \(\angle BCA = \angle AB'B\), значит треугольники \(ALB'\) и \(BLC\) подобны, значит
+        \[
+        \frac{l}{c'} = \frac{a'}{d} \quad \Longrightarrow ld = a'c'.
+        \]
+        Легко видеть, что треугольники \(ABB'\) и \(LBC\) подобны, значит
+        \[
+        \frac{l + d}{a} = \frac{c}{l} \quad \Longrightarrow l^2 + ld = ac \quad \Longrightarrow l^2 = ac - a'c'.
+        \]</p>
+        <div class="theorem-image">
+            <img src="биссектриса/bissektr_5_proof.png" alt="Доказательство теоремы 4" class="small-img">
+        </div>
+    </div>
+
+
+    <div id="f5bissektr">
+        <h2>5. Угол между биссектрисами двух внутренних углов треугольника равен 90&deg; - &alpha;/2. Смежный ему угол равен 90&deg; + &alpha;/2.</h2>
+        <p><strong>Доказательство:</strong> Пусть I точка пересечения биссектрис углов &beta; = &angle;B и &gamma; = &angle;C. &beta; + &gamma; = 180&deg;, значит &frac12;(&beta; + &gamma;) = 90&deg; - &frac12;&alpha;, &angle;AIC = 180&deg; - &frac12;(&alpha; + &beta;) = 90&deg; + &frac12;&alpha;, смежный ему равен 90&deg; - &frac12;&alpha;.</p>
+        <div style="text-align: center;">
+            <img src="биссектриса/bissektr_6.png" alt="Diagram" style="width: 50%; height: auto;">
+        </div>
+    </div>
+    
+    <div id="f6bissektr">
+        <h2>6. Угол между биссектрисами 2 внешних углов треугольника равен 90&deg; - &alpha;/2.</h2>
+        <p><strong>Доказательство:</strong> Мы знаем, что &angle;ABC = 180&deg; - (&angle;BAC + &angle;BCA), &angle;CAK = 90&deg; - &frac12;&angle;AKC, &angle;ACK = 90&deg; - &frac12;&angle;BCA, при этом &angle;AKC = 180&deg; - (&angle;CAK + &angle;ACK) = 180&deg; - (90&deg; - &frac12;&angle;AKC + 90&deg; - &frac12;&angle;BCA) = &frac12;(&angle;BAC + &angle;BCA) = &frac12;(180&deg; - (&angle;BAC + &angle;BCA)) = 90&deg; - &frac12;&angle;ABC = 90&deg; - &frac12;&alpha;.</p>
+        <div style="text-align: center;">
+            <img src="биссектриса/bissektr_7.png" alt="Diagram" style="width: 50%; height: auto;">
+        </div>
+    </div>
+
+
+    <div id="f7bissektr">
+        <h2>7. Угол между биссектрисами двух внутренних углов треугольника равен 90&deg; - &alpha;/2.</h2>
+        <p><strong>Доказательство:</strong> Пусть I точка пересечения биссектрис углов &beta; = &angle;B и &gamma; = &angle;C. &beta; + &gamma; = 180&deg;, значит &frac12;(&beta; + &gamma;) = 90&deg; - &frac12;&alpha;, &angle;AIC = 180&deg; - &frac12;(&alpha; + &beta;) = 90&deg; + &frac12;&alpha;, смежный ему равен 90&deg; - &frac12;&alpha;.</p>
+        <div style="text-align: center;">
+            <img src="биссектриса/bissektr_6.png" alt="Diagram" style="width: 50%; height: auto;">
+        </div>
+    </div>
+    
+    <div id="f8bissektr">
+        <h2>8. Биссектрисы треугольника точкой биссектрис делятся следующим образом:</h2>
+        <div style="text-align: center;">
+            <img src="биссектриса/bissektr_8.png" alt="Diagram" style="width: 50%; height: auto;">
+        </div>
+        <p><strong>Доказательство:</strong> Докажем отношение &frac12;(AC/AC') = &frac12;(a + b)/c. AO является биссектрисой треугольника ACC', поэтому выполнено соотношение:</p>
+        <p><strong>&frac12;(AC/AC') = &frac12;(b/(c - C'B)) = &frac12;(CO/OC')</strong></p>
+        <p>CC' -- биссектриса треугольника ABC, поэтому:</p>
+        <p><strong>&frac12;(AC/CB) = &frac12;(b/a) = &frac12;(AC'/C'B)</strong></p>
+        <p>Следовательно, C'B = &frac12;(AC'&middot;a/b) = &frac12;(ac/(a + b))</p>
+        <p>Получаем:</p>
+        <p><strong>&frac12;(AC/AC') = &frac12;(b/(c - &frac12;(ac/(a + b)))) = &frac12;((a + b)/c)</strong></p>
+    </div>
+    
+    <div id="f9bissektr">
+        <h2>9. Пусть на плоскости нам даны две точки A, B, а также k > 0, k &ne; 1 -- фиксированное число. Геометрическим множеством точек P таких, что BP/AP = k, является окружность, называемая <strong>окружностью Аполлония</strong>.</h2>
+        <div style="text-align: center;">
+            <img src="биссектриса/bissektr_9.png" alt="Diagram" style="width: 50%; height: auto;">
+        </div>
+    </div>
+    
+
+                
+    </section>
+</body>
+</html>

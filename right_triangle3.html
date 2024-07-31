@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Треугольники общего вида</title>
+    <link rel="stylesheet" href="styles/angles.css">
+    <!-- Подключение MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <section class="content-container">
+        <h1>Треугольники общего вида</h1>
+
+        <div class="theorem" id="f1pryam">
+            <h2>1. Напротив угла в \(30^{\circ}\) лежит катет, равный половине гипотенузы: если \(\alpha = 30^{\circ}\), тогда \(2a = c\).</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_1.png" alt="Right triangle with a 30 degree angle" class="small-img">
+            </div>
+            <div class="proof">
+                <p><em>Доказательство:</em> Отложим от точки \(C\) отрезок \(B'C\), такой что \(B'C = a\), и точки \(B\), \(C\), \(C'\) — лежат на одной прямой. Тогда в треугольнике \(ABB'\) \(AC\) — высота и медиана, значит \(ABB'\) — равнобедренный треугольник (\(\angle{B'} = \angle{B}\)). \(AC\) — биссектриса угла \(\angle{B'AB}\), поэтому \(\angle{B'AB} = 60^{\circ}\), отсюда следует, что оставшиеся углы треугольника также равны \(60^{\circ}\), то есть \(ABB'\) — равносторонний треугольник, в частности \(2a = BB' = AB = c\).</p>
+                <div class="proof-image">
+                    <img src="прямоугольные треугольники/right_triangle_1_proof.png" alt="Proof diagram for 30 degree angle in right triangle" class="small-img">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="theorem" id="t8">
+            <h2>2. Теорема Пифагора: в прямоугольном треугольнике сумма квадратов катетов равна квадрату гипотенузы: \(a^2 + b^2 = c^2\).</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_2.png" alt="Right triangle illustrating Pythagorean theorem" class="small-img">
+            </div>
+            <div class="proof">
+                <p>Если в треугольнике \(ABC\) со сторонами \(a\), \(b\), \(c\) верно, что \(a^2 + b^2 = c^2\), то угол, лежащий напротив стороны \(c\), равен \(90^{\circ} \) (Обратная теореме Пифагора).</p>
+                <p><em>Доказательство:</em> Достроим треугольник \(ABC\) до квадрата \(CHFD\) со стороной \((a+b)\) как показано на рисунке. Треугольники \(ABC\), \(GAH\), \(EGF\), \(BED\) равны по двум сторонам (катетам) и углу между ними. \(\alpha + \beta = 90^{\circ}\), поэтому \(AGEB\) — квадрат. Таким образом, площадь квадрата равна, с одной стороны \((a + b)^2\), с другой стороны \(4 \cdot \dfrac{ab}{2} + c^2\), то есть 
+                \[(a + b)^2 = 2ab + c^2 \;\;\; \Longrightarrow \;\;\; a^2 + 2bc + b^2 = 2ab + c^2 \;\;\; \Longrightarrow \;\;\; a^2 + b^2 = c^2.\]</p>
+                <div class="proof-image">
+                    <img src="прямоугольные треугольники/right_triangle_2_proof.png" alt="Proof diagram for Pythagorean theorem" class="small-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="theorem" id="f3triangle">
+            <h2>3. Обратная теорема Пифагора</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_2.png" alt="Теорема Пифагора" class="small-img"> 
+            </div>
+            <p>Если в треугольнике \(ABC\) со сторонами \(a\), \(b\), \(c\) верно, что \(a^2+b^2=c^2\), то угол, лежащий напротив стороны \(c\), равен \(90^{\circ} \).</p>
+            <p><i>Доказательство:</i> Достроим треугольник \(ABC\) до квадрата \(CHFD\) со стороной \((a+b)\) как показано на рисунке. Треугольники \(ABC\), \(GAH\), \(EGF\), \(BED\) равны по двум сторонам (катетам) и углу между ними. \(\alpha + \beta = 90^{\circ}\), поэтому \(AGEB\) — квадрат. Таким образом, площадь квадрата равна, с одной стороны \((a + b)^2\), с другой стороны \(4 \cdot \dfrac{ab}{2} + c^2\), то есть 
+                \[(a + b)^2 = 2ab + c^2 \;\;\; \Longrightarrow \;\;\; a^2 + 2bc + b^2 = 2ab + c^2 \;\;\; \Longrightarrow \;\;\; a^2 + b^2 = c^2.\]
+            </p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_2_proof.png" alt="Proof of Pythagorean Theorem" class="small-img">
+            </div>
+        </div>
+
+        <div class="theorem" id="f4pryam">
+            <h2>4. Медиана, проведённая к гипотенузе прямоугольного треугольника, равна половине гипотенузы.</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_3.png" alt="Медиана в прямоугольном треугольнике" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> Продлим медиану \(CM\) (за точку \(M\)) до точки \(D\) так, что \(AM = MD\). Треугольники \(CMB\) и \(MDA\) равны по двум сторонам и углу между ними (\(CM = MD\), \(BM = MA\), \(\angle CMB = \angle AMD\), так как они являются вертикальными), значит \(\angle CBM = \angle MAD\). Аналогично, подобны треугольники \(CAM\) и \(DBM\), а значит \(\angle CAM = \angle MBD\). Таким образом, треугольники \(ABC\) и \(BAD\) равны, значит \(CADB\) — прямоугольник, в котором \(AB\) и \(CD\) — диагонали, они равны и в точке пересечения делятся пополам, поэтому \(CM = AM = MD = \frac{1}{2}AB\).</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_3_proof.png" alt="Доказательство медианы" class="small-img">
+            </div>
+        </div>
+        
+
+        <div class="theorem" id="f5pryam">
+            <h2>5. Гипотенуза является диаметром, а её середина — центром окружности, описанной вокруг данного прямоугольного треугольника.</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_4.png" alt="Гипотенуза как диаметр окружности" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> Угол \(\angle ACB = 90^\circ\), отрезок, на который он опирается, является диаметром, то есть \(AB\) — диаметр. Середина диаметра является центром окружности, значит середина гипотенузы является центром описанной окружности.</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_4_proof.png" alt="Доказательство гипотенузы" class="small-img">
+            </div>
+        </div>
+        
+
+        <div class="theorem" id="f6pryam">
+            <h2>6. Рассмотрим прямоугольный треугольник \(ABC\) (угол \(\angle C\) — прямой), \(CH\) — высота, тогда треугольники \(ABC\), \(ACH\), \(CBH\) подобны.</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_5_1.png" alt="Подобие треугольников в прямоугольном треугольнике" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> \(\angle HCB = 180^\circ - (90^\circ + \beta) = 90^\circ - \beta = \alpha\), значит треугольники \(ABC\) и \(CBH\) подобны по трём углам. Аналогично, \(\angle ACH = 180^\circ - (90^\circ + \alpha) = 90^\circ - \alpha = \beta\), то есть треугольники \(ABC\) и \(ACH\) подобны.</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_5.png" alt="Доказательство подобия треугольников" class="small-img">
+            </div>
+        </div>
+        
+
+        <div class="theorem" id="f7pryam">
+            <h2>7. Высота прямоугольного треугольника, опущенная на гипотенузу, вычисляется по формуле: 
+                \( h = \frac{ab}{c} \) или \( h^2 = c_a c_b \). Также верны следующие соотношения: 
+                \( c_a c = a^2 \) или \( c_b c = b^2 \).
+            </h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_5.png" alt="Высота на гипотенузу" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> Так как треугольники \(ABC\) и \(ACH\) подобны, то мы можем записать соотношение:
+                \[ \frac{CH}{CB} = \frac{AC}{AB} \text{ или } \frac{h}{a} = \frac{b}{c} \text{, поэтому } h = \frac{ab}{c}. \]
+            </p>
+            <p>А также:</p>
+            <p>Из подобия треугольников \(ACH\) и \(CBH\) получаем:
+                \[ \frac{CH}{AH} = \frac{HB}{CH} \text{ или } \frac{h}{c_b} = \frac{c_a}{h} \text{, поэтому } h^2 = c_a c_b. \]
+            </p>
+            <p>Из подобия \(ABC\) и \(CBH\) следует:
+                \[ \frac{CB}{AB} = \frac{HB}{CB} \text{ или } \frac{a}{c} = \frac{c_a}{a} \text{, значит } c_a c = a^2. \]
+            </p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_5.png" alt="Доказательство высоты на гипотенузу" class="small-img">
+            </div>
+        </div>
+        
+        <div class="theorem" id="f8pryam">
+            <h2>8. Пусть \( x_a \), \( x_b \), \( x_c \) — соответственные линейные элементы прямоугольных треугольников с гипотенузами \( a \), \( b \), \( c \) соответственно, тогда
+                \[ x_a^2 + x_b^2 = x_c^2. \]
+            </h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_5.png" alt="Линейные элементы треугольников" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> В подобных треугольниках линейные элементы относятся также как стороны этих треугольников. Поэтому для треугольников \(ACH\) и \(CBH\) получаем:
+                \[ \frac{a}{c} = \frac{x_a}{x_c}. \]
+            </p>
+            <p>Для треугольников \(ABC\) и \(ACH\):
+                \[ \frac{b}{c} = \frac{x_b}{x_c}. \]
+            </p>
+            <p>Возведём в квадрат оба равенства и сложим:
+                \[ \frac{a^2 + b^2}{c^2} = \frac{x_a^2 + x_b^2}{x_c^2}. \]
+                Поскольку \(\frac{a^2 + b^2}{c^2} = 1\), получаем \( x_a^2 + x_b^2 = x_c^2 \).
+            </p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_5.png" alt="Доказательство линейных элементов" class="small-img">
+            </div>
+        </div>
+
+        <div class="theorem" id="f9pryam">
+            <h2>9. В прямоугольном треугольнике угол между высотой и медианой, проведенными из прямого угла, равен разности острых углов треугольника.</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_6.png" alt="Угол между высотой и медианой" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> \(CM\) — медиана, исходящая из прямого угла, поэтому \(\angle ACM = \angle MAC = \alpha\). \(\alpha + \beta = 90^\circ\). Треугольник \(HCB\) прямоугольный, поэтому \(\angle HCB + \angle HBC = 90^\circ\), то есть \(\angle HCB = 90^\circ - \beta = \alpha\). С одной стороны, \(\angle MCH + 2\alpha = 90^\circ\), с другой \(\alpha + \beta = 90^\circ\), значит \(\angle MCH + 2\alpha = \alpha + \beta \Longrightarrow \angle MCH = \beta - \alpha\).</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_6_proof.png" alt="Доказательство угла между высотой и медианой" class="small-img">
+            </div>
+        </div>
+        
+        <div class="theorem" id="f10pryam">
+            <h2>10. Радиус вписанной в прямоугольный треугольник окружности равен \(r = \dfrac{a+b-c}{2}\).</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_7.png" alt="Радиус вписанной окружности" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> \(B'C = CA' = r\), \(A'B = BC' = a - r\), \(B'A = AC' = b - r\), значит \(c = (a - r) + (b - r) \Longrightarrow 2r = a + b - c\) или \(r = \dfrac{a + b - c}{2}\).</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_7_proof.png" alt="Доказательство радиуса вписанной окружности" class="small-img">
+            </div>
+        </div>
+        
+        <div class="theorem" id="f11pryam">
+            <h2>11. В прямоугольном треугольнике биссектрисa прямого угла является также биссектрисой треугольника, образованного высотой, медианой и отрезком гипотенузы.</h2>
+            <div class="theorem-image">
+                <img src="прямоугольные треугольники/right_triangle_8.png" alt="Биссектрисa прямого угла" class="small-img">
+            </div>
+        </div>
+        <div class="proof">
+            <p><em>Доказательство:</em> \(CM\) — медиана, исходящая из прямого угла, поэтому \(CM = MB\), значит \(\angle MBC = \angle MCB\). \(ABC\) — прямоугольный, поэтому \(\angle CAB + \angle MBC = 90^\circ\). \(ACH\) также является прямоугольным, поэтому \(\angle CAB + \angle CAH = 90^\circ\). Таким образом, мы получаем, что \(\angle MBC = \angle MCB = \angle CAH\), но биссектрисa делит \(\angle ACB\) пополам, значит и угол \(\angle HCM\) пополам.</p>
+            <div class="proof-image">
+                <img src="прямоугольные треугольники/right_triangle_8_proof.png" alt="Доказательство биссектрисы прямого угла" class="small-img">
+            </div>
+        </div>
+
+
+    </section>
+</body>
+</html>

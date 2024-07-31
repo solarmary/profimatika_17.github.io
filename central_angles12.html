@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Центральные и вписанные углы</title>
+    <link rel="stylesheet" href="styles/angles.css">
+    <!-- Подключение MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Центральные и вписанные углы</h1>
+    <section class="content-container">
+
+        <div id="def1">
+            <h2>Центральные и вписанные углы</h2>
+            <p>Угол с вершиной в центре окружности называется <strong>центральным</strong>.</p>
+            <p>\[\angle \alpha = \stackrel{\smile}{AB}.\]</p>
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_1.png" alt="Центральный угол" class="small-img">
+        </div>
+        
+        <div id="def2">
+            <p>Угол, вершина которого лежит на окружности, а стороны пересекают окружность называется <strong>вписанным</strong>.</p>
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_2.png" alt="Вписанный угол" class="small-img">
+        </div>
+        
+        <div id="task1">
+            <h2><strong>1. </strong> Вписанный угол, опирающийся на ту же дугу, что и центральный, равен его половине.</h2>
+            <p>\[\angle \beta =\frac{1}{2}\alpha.\]</p>
+            <p><strong>Доказательство:</strong> Рассмотрим 3 случая расположения точки C.</p>
+            <p><strong>Случай 1:</strong> Пусть точка O лежит на отрезке AC. Тогда AC -- диаметр и OC = OB, то есть треугольник COB -- равнобедренный и \(\angle{COB} = \angle{BOC}\). Внешний угол \(\angle{AOB}\) равен сумме внутренних, не смежных с ним. Получаем, что \(\angle{AOB} = \angle{COB} + \angle{BOC} = 2\angle{COB} = 2\angle{ACB}\).</p>
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_3.png" alt="Доказательство случая 1" class="small-img">
+        </div>
+
+        <div id="task1_case2">
+            <h3><strong>Случай 2:</strong> Пусть точка O лежит внутри угла ACB. Продолжим прямую CO до пересечения с окружностью в точке D. Точка O лежит на отрезке CD, а значит \(\angle{AOD} = 2\angle{ACD}\) и \(\angle{DOB} = 2\angle{DCB}\) (см. случай 1), поэтому \(\angle{AOB} = 2\angle{ACB}\).</h3>
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_3_proof_1.png" alt="Доказательство случая 2 - Часть 1" class="small-img">
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_3_proof_2.png" alt="Доказательство случая 2 - Часть 2" class="small-img">
+        </div>
+        
+        <div id="task1_case3">
+            <h3><strong>Случай 3:</strong> Пусть точка O лежит вне угла ACB. Продолжим прямую CO до пересечения с окружностью в точке D. Без ограничения общности, считаем, что точка A лежит внутри угла DCB. Тогда \(\angle{AOB} = \angle{BOD} - \angle{AOD} = 2\angle{BCD} - 2\angle{ACD} = 2\angle{ACB}\).</h3>
+        </div>
+        
+        <div class="figure">
+            <img src="центральные и вписанные углы/cent_insc_angle_3_proof_3.png" alt="Доказательство случая 3" class="small-img">
+        </div>
+
+
+        <div id="task2">
+            <h2><strong>2. </strong> Радиус окружности, проведенный в точку касания, перпендикулярен касательной.</h2>
+            <p><strong>Доказательство:</strong> Допустим, что радиус окружности, проведенный в точку касания, не перпендикулярен касательной. Тогда проведём к касательной отрезок, перпендикулярный ей. При этом радиус является наклонной к касательной, а значит расстояние от точки <span style="font-style: italic;">O</span> до касательной меньше радиуса, поэтому касательная имела бы две точки пересечения с окружностью. Противоречие.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_17.png" alt="Иллюстрация к задаче 2" class="small-img">
+            </div>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_17_proof.png" alt="Доказательство к задаче 2" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task3">
+            <h2><strong>3. </strong> Угол между касательной и хордой равен вписанному углу, который опирается на одну дугу с хордой.</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_4.png" alt="Иллюстрация к задаче 3" class="small-img">
+            </div>
+            
+            <p><strong>Доказательство:</strong> Продлим отрезок <span style="font-style: italic;">BO</span> до пересечения с окружностью в точке <span style="font-style: italic;">D</span>. Тогда по теореме о вписанном угле получаем, что <span style="font-style: italic;">∠BDC = ∠BAC</span>. Угол <span style="font-style: italic;">BCD</span> опирается на диаметр окружности, а значит он равен <span style="font-style: italic;">90°</span>, поэтому <span style="font-style: italic;">∠CBD = 90° - ∠BDC = 90° - ∠BAC</span>. <span style="font-style: italic;">OB</span> — радиус окружности, а значит <span style="font-style: italic;">∠DBE = ∠OBE = 90°</span>. Таким образом, <span style="font-style: italic;">∠CBE = 90° - ∠CBD = 90° - (90° - ∠BAC) = ∠BAC</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_4_proof.png" alt="Доказательство к задаче 3" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task4">
+            <h2><strong>4. </strong> Угол между пересекающимися хордами равен полусумме высекаемых ими дуг.</h2>
+            
+            <p><strong>Доказательство:</strong> Пусть <span style="font-style: italic;">E</span> — точка пересечения хорд <span style="font-style: italic;">AC</span> и <span style="font-style: italic;">BD</span>. Рассмотрим треугольник <span style="font-style: italic;">AED</span>. Мы знаем, что <span style="font-style: italic;">∠BDA = ½ ∠AB</span> и <span style="font-style: italic;">∠CAD = ½ ∠CD</span>, также <span style="font-style: italic;">∠AED = 180° - ∠BDA - ∠CAD = 180° - ½ ( ∠AB + ∠CD )</span>. При этом <span style="font-style: italic;">∠CED = 180° - ∠AED = ½ ( ∠AB + ∠CD )</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_5.png" alt="Иллюстрация к задаче 4" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task5">
+            <h2><strong>5. </strong> Угол между двумя секущими, проведенными из одной точки, равен полуразности градусных мер большей и меньшей высекаемых ими дуг.</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_6_proof.png" alt="Иллюстрация к задаче 5" class="small-img">
+            </div>
+            
+            <p><strong>Доказательство:</strong> Рассмотрим треугольник <span style="font-style: italic;">MDB</span>. Мы знаем, что <span style="font-style: italic;">∠MBD = ½ ∠CD</span> и <span style="font-style: italic;">∠ADB = ∠AB</span>. Угол <span style="font-style: italic;">ADB</span> — внешний для треугольника <span style="font-style: italic;">MDB</span>, значит <span style="font-style: italic;">∠ADB = ∠DMB + ∠MBD</span>, то есть <span style="font-style: italic;">∠DMB = ∠ADB - ∠MBD = ½ ( ∠AB - ∠CD )</span>.</p>
+        </div>
+
+        <div id="task6">
+            <h2><strong>6. </strong> Угол между касательной и секущей, проведенными из одной точки, равен полуразности высекаемых ими дуг.</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_8.png" alt="Иллюстрация к задаче 6" class="small-img">
+            </div>
+            
+            <p><strong>Доказательство:</strong> Рассмотрим треугольник <span style="font-style: italic;">ABC</span>. По теореме об угле между касательной и хордой получаем, что <span style="font-style: italic;">∠BAC = ∠CBM</span>. По теореме о секущем угле мы знаем, что <span style="font-style: italic;">∠ACB = ½ ∠BA</span> и <span style="font-style: italic;">∠CMB = ∠BAC = ½ ∠CB</span>. Угол <span style="font-style: italic;">ACB</span> является внешним для треугольника <span style="font-style: italic;">MBC</span>, значит <span style="font-style: italic;">∠ACB = ∠CBM + ∠CMB</span>, то есть <span style="font-style: italic;">∠CMB = ∠ACB - ∠CMB = ½ ( ∠BA - ∠CB )</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_8_proof.png" alt="Иллюстрация к доказательству 6" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task7">
+            <h2><strong>7. </strong> Угол между двумя касательными, проведенными из одной точки, равен полуразности высекаемых ими дуг.</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_7.png" alt="Иллюстрация к задаче 7" class="small-img">
+            </div>
+            
+            <p><strong>Доказательство:</strong> Четырёхугольник <span style="font-style: italic;">AOBM</span> — дельтоид, потому что <span style="font-style: italic;">AO</span> и <span style="font-style: italic;">OB</span> — радиусы окружности, а <span style="font-style: italic;">MA</span> и <span style="font-style: italic;">MB</span> — касательные, проведённые из одной точки. При этом по теореме об угле между касательной и радиусом получаем, что <span style="font-style: italic;">∠OAM = ∠OBM = 90°</span>, значит вокруг <span style="font-style: italic;">AOBM</span> можно описать окружность и значит <span style="font-style: italic;">∠AOB + ∠AMB = 180°</span>. Угол <span style="font-style: italic;">AOB</span> — центральный, поэтому <span style="font-style: italic;">∠AOB = ∠AB</span>.
+        
+        
+        <div id="task8">
+            <h2><strong>8. </strong> На отрезке <span style="font-style: italic;">AB</span> как на диаметре построили окружность. Тогда:</h2>
+            
+            <ol>
+                <li>Из точек, лежащих строго внутри окружности, отрезок <span style="font-style: italic;">AB</span> виден под тупым углом.</li>
+                <li>Из точек, лежащих на самой окружности, отрезок <span style="font-style: italic;">AB</span> виден под прямым углом.</li>
+                <li>Из точек, лежащих вне окружности, отрезок <span style="font-style: italic;">AB</span> виден под острым углом.</li>
+            </ol>
+            
+            <p><strong>Доказательство:</strong> Для начала рассмотрим случай, когда точка <span style="font-style: italic;">C2</span> лежит на окружности. Тогда угол <span style="font-style: italic;">∠AC2B</span> опирается на диаметр окружности, значит по теореме о вписанном угле следует, что <span style="font-style: italic;">∠AC2B = 90°</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_9.png" alt="Иллюстрация к задаче 8" class="small-img">
+            </div>
+            
+            <p>Далее рассмотрим случай 1. Пусть точка <span style="font-style: italic;">C1</span> лежит внутри окружности. Продлим отрезок <span style="font-style: italic;">AC1</span> до пересечения с окружностью в точке <span style="font-style: italic;">D</span>. Тогда <span style="font-style: italic;">∠ADB = 90°</span>, значит <span style="font-style: italic;">∠BC1D < 90°</span>, так как <span style="font-style: italic;">∠BC1D</span> — угол между катетом и гипотенузой в прямоугольном треугольнике <span style="font-style: italic;">BDC1</span>. Таким образом, получаем, что <span style="font-style: italic;">∠AC1B = 180° - ∠BC1D > 90°</span>.</p>
+            
+            <p>Рассмотрим случай 3. Пусть точка <span style="font-style: italic;">C3</span> лежит вне окружности и <span style="font-style: italic;">D</span> — точка пересечения отрезка <span style="font-style: italic;">AC3</span> с окружностью. Тогда <span style="font-style: italic;">∠ADB = 90°</span>, поэтому <span style="font-style: italic;">∠BDC3 = 90°</span>, значит <span style="font-style: italic;">∠BC3D < 90°</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_9_proof_1.png" alt="Иллюстрация к доказательству 8-1" class="small-img">
+                <img src="центральные и вписанные углы/cent_insc_angle_9_proof_2.png" alt="Иллюстрация к доказательству 8-2" class="small-img">
+            </div>
+        </div>
+
+        <div id="task9">
+            <h2><strong>9. </strong> Дуги, заключенные между двумя параллельными хордами, равны.</h2>
+            
+            <p><strong>Доказательство:</strong> Так как отрезки <span style="font-style: italic;">AD</span> и <span style="font-style: italic;">BC</span> параллельны, то углы <span style="font-style: italic;">DAC</span> и <span style="font-style: italic;">ACB</span> равны как внутренние накрест лежащие, значит они стягивают равные дуги.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_10.png" alt="Иллюстрация к задаче 9" class="small-img">
+            </div>
+        </div> 
+        
+        
+        <div id="task10">
+            <h2><strong>10. </strong> Дуги, стягиваемые равными хордами, равны.</h2>
+            
+            <p><strong>Доказательство:</strong> Рассмотрим треугольники <span style="font-style: italic;">AOB</span> и <span style="font-style: italic;">DOC</span>. <span style="font-style: italic;">AO = OB = DO = OC</span>, так как это радиусы окружности, при этом <span style="font-style: italic;">AB = CD</span>, значит треугольники <span style="font-style: italic;">AOB</span> и <span style="font-style: italic;">DOC</span> равны по трём сторонам, значит <span style="font-style: italic;">∠AOB = ∠DOC</span>, значит равны и стягиваемые ими дуги.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_11.png" alt="Иллюстрация к задаче 10" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task11">
+            <h2><strong>11. </strong> Диаметр, перпендикулярный хорде, делит пополам саму хорду и дугу, стягиваемую ею. Обратно, диаметр, проходящий через середину хорды, делит её пополам.</h2>
+            
+            <p><strong>Доказательство:</strong> Пусть <span style="font-style: italic;">CD</span> — диаметр, <span style="font-style: italic;">AB</span> — хорда, перпендикулярная <span style="font-style: italic;">CD</span>. Рассмотрим треугольник <span style="font-style: italic;">AOB</span>, он равнобедренный, так как <span style="font-style: italic;">OA</span> и <span style="font-style: italic;">OB</span> — радиусы окружности. <span style="font-style: italic;">OM</span> — высота треугольника <span style="font-style: italic;">AOB</span>, проведённая к основанию, значит <span style="font-style: italic;">OM</span> также является биссектрисой, поэтому дуги, на которые опираются центральные углы <span style="font-style: italic;">AOD</span> и <span style="font-style: italic;">BOD</span>, равны. Аналогично доказывается, что <span style="font-style: italic;">∠AC = ∠CB</span>.</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_12.png" alt="Иллюстрация к задаче 11" class="small-img">
+            </div>
+            
+            <p>Обратно, если диаметр <span style="font-style: italic;">CD</span> проходит через середину хорды <span style="font-style: italic;">AB</span>. <span style="font-style: italic;">AOB</span> — равнобедренный треугольник, а значит <span style="font-style: italic;">OM</span> — медиана треугольника <span style="font-style: italic;">AOB</span>.</p>
+        </div>
+        
+        
+
+        <div id="task12">
+            <h2><strong>12. </strong> Пусть хорды <span style="font-style: italic;">AB</span> и <span style="font-style: italic;">CD</span> пересекаются в точке <span style="font-style: italic;">E</span>, тогда <br>
+            \[AE \cdot EB = DE \cdot EC.\]</h2>
+            
+            <p><strong>Доказательство:</strong> Рассмотрим треугольники <span style="font-style: italic;">DEA</span> и <span style="font-style: italic;">CEB</span>. Внутренние углы <span style="font-style: italic;">ADC</span> и <span style="font-style: italic;">ABC</span> опираются на одну и ту же дугу, значит <span style="font-style: italic;">∠ADC = ∠ABC</span>. Аналогично получаем, что <span style="font-style: italic;">∠DAB = ∠DCB</span>, значит треугольники <span style="font-style: italic;">DEA</span> и <span style="font-style: italic;">CEB</span> подобны по двум углам. Таким образом, <span style="font-style: italic;">AE / EC = DE / EB</span>, значит <br>
+            \[AE \cdot EB = DE \cdot EC.\]</p>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_13.png" alt="Иллюстрация к задаче 12" class="small-img">
+            </div>
+        </div>
+        
+        <div id="task13">
+            <h2><strong>13. </strong> Пусть <span style="font-style: italic;">M</span> – точка вне окружности, <span style="font-style: italic;">a</span> – расстояние от точки <span style="font-style: italic;">M</span> до центра окружности, <span style="font-style: italic;">r</span> – радиус окружности. <span style="font-style: italic;">BM</span> – касательная к окружности, секущая из точки <span style="font-style: italic;">M</span> пересекает окружность в точках <span style="font-style: italic;">A</span> и <span style="font-style: italic;">C</span>, тогда:</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_15.png" alt="Figure 13" class="small-img">
+            </div>
+            
+            <p><strong>Доказательство:</strong> Рассмотрим треугольники <span style="font-style: italic;">ABM</span> и <span style="font-style: italic;">BCM</span>. По теореме об угле между касательной и хордой получаем, что <span style="font-style: italic;">∠BAC = ∠CBM</span>. Угол <span style="font-style: italic;">BMA</span> общий для треугольников <span style="font-style: italic;">ABM</span> и <span style="font-style: italic;">BCM</span>, значит они подобны. Получаем, что:</p>
+            
+            <p style="text-align:center;">\[ \dfrac{MB}{MA} = \dfrac{MC}{MB} \]</p>
+            <p style="text-align:center;">значит \(MB^2 = MC \cdot MA\).</p>
+            
+            <p>Треугольник <span style="font-style: italic;">OBM</span> – прямоугольный, так как радиус, проведённый к точке касания, перпендикулярен касательной. Таким образом, по теореме Пифагора получаем, что <span style="font-style: italic;">OA^2 = OB^2 + MB^2</span>, значит:</p>
+            
+            <p style="text-align:center;">\[MB^2 = a^2 - r^2.\] $\thnd$</p>
+        </div>
+
+        <div id="task14">
+            <h2><strong>14. </strong> Пусть <span style="font-style: italic;">M</span> – точка вне окружности. <span style="font-style: italic;">ME</span> – касательная к окружности. Из точки <span style="font-style: italic;">M</span> выходят две секущие: первая пересекает окружность в точках <span style="font-style: italic;">A</span> и <span style="font-style: italic;">B</span>, вторая – в точках <span style="font-style: italic;">C</span> и <span style="font-style: italic;">D</span>. Тогда:</h2>
+            
+            <div class="figure">
+                <img src="центральные и вписанные углы/cent_insc_angle_14.png" alt="Figure 14" class="small-img">
+            </div>
+        </div>
+        
+        
+    </section>
+</body>
+</html>
